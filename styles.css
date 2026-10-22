@@ -1,0 +1,687 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo .subtitulo {
+  font-size: 16px;
+  margin: 10px;
+  text-align: center;
+  overflow: auto;
+  color: black;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 24px;
+  background-color: #f1f1f1;
+}
+
+.logo-link {
+  display: block;
+  flex: 0 1 100px;
+  line-height: 0;
+}
+
+.header .logo {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.header-right a {
+  padding: 12px;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.header-right a:hover {
+  background-color: #ddd;
+}
+
+.header-right a.active {
+  background-color: #426b0b;
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .logo-link {
+    flex-basis: auto;
+    width: min(100%, 100px);
+  }
+
+  .header-right {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Formatação do site no celular */
+@media (max-width: 1200px) {
+  /* Corpo do site */
+  body {
+  font-size: 25px;
+	margin: 10px 10px 10px 10px;}
+  img {max-width: 100%}
+
+  /* Linhas dos divs */
+  .row, .row2, .row3 {
+  flex-direction: column;
+  height: auto;
+  gap: 10px;
+  }
+
+  .scrollgallery {
+  overflow-x: auto;
+  overflow-y: hidden;
+  }
+
+  .scrollgallery .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: max-content;
+  min-width: 100%;
+  }
+
+  /* Colunas dos divs */
+  .column {
+  float: none;
+  width: 100%;
+  height: auto;
+  margin: 0 0 10px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  .scrollgallery .column {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 10px;
+  }
+
+  .column img {
+  opacity: 1; 
+  cursor: pointer;
+  width: 80%;
+  height: 80%;
+  object-fit: scale-down;
+  }
+
+  .scrollgallery .column img {
+  max-width: none;
+  height: 60px;
+  }
+
+  .scrollgallery .column img#img7 {
+  width: 80px;
+  }
+
+  /* Imagens expandidas */
+  #expandedImg {
+  width: 90vw;
+  max-width: 100%;
+  }
+
+  /* Texto expandido */
+  #imgtext {
+  font-size: 16px;
+  margin: 10px;
+  text-align: center;
+  overflow: auto;
+  }
+  
+  /* Div classe box2 */
+  .box {
+  display: flex-wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  }
+
+  /* Div classe linha2 */
+  .row2 {
+  flex-direction: column;
+  align-items: center;
+  }
+
+  /* Div classe box2 */
+  .box2 {
+  width: 100%;
+  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  }
+
+  /* Div classe box2 e iframes com vídeos*/
+  .box2 iframe {
+  width: 90vw;
+  max-width: 100%;
+  height: 200px;
+  }
+}
+
+/* Barra de navegação do site */
+:root {
+--cor-primaria:#426b0b;
+}
+
+.nav{
+display: flex;
+gap:20px;
+background:var(--cor-primaria);
+padding:10px;
+}
+
+.nav a{
+color: white;
+text-decoration:none;
+}
+
+.nav a.active{
+font-weight:bold;
+border-bottom:2px solid white;
+}
+
+/* Título da página na barra de navegação */
+#titulo, #subtitulo 	{
+  font-family: Arial;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Corpo */
+body {
+	font-family: Arial;
+	background-color: #97ce3f;
+	text-align: center;
+	margin: 10px 10px 10px 10px;
+	img {max-width: 100%}
+}
+
+/* Parágrafos */
+p.n1 {
+	font-family: Arial;
+  color: white;
+  font-size: 12px;
+}
+
+p.n2 {
+	font-family: Arial;
+  color: white;
+  font-size: 10px
+}
+
+h4 	{
+  font-family: Arial;
+  color: white;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+h4.missao 	{
+  font-size: small;
+  font-family: Arial;
+  color: white;
+  margin-right: 0;
+  margin-left: 0;
+  text-align: justify;
+  margin: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* 4 colunas iguais que ficam uma ao lado da outra */
+
+.column {
+  float: left;
+  width: 100px;
+  height: 100px;
+  
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  margin: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* Coloca as imagens dentro da grade */
+.column img {
+  opacity: 1; 
+  cursor: pointer;
+  width: 80%;
+  height: 80%;
+  object-fit: scale-down;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+#img7 {
+  width:540px;
+  height: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#expandedImg {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Expande o texto da imagem */
+#imgtext {
+  max-width: 900px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  margin: 12px auto;
+}
+
+#imgcredit {
+  font-size: 12px;
+}
+
+#imgcredit p {
+  margin: 0;
+}
+
+#imgcredit a {
+  color: white;
+}
+
+.image-viewer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.image-viewer #expandedImg {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.image-viewer-control {
+  flex: 0 0 auto;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--cor-primaria);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.image-viewer-control:hover {
+  background: #426b0b;
+}
+
+.column img.selected {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+/* Container das imagens expandidas */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Mostra quando ativo */
+.container.active {
+  display: block;
+}
+
+.row {
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+  padding:10px;
+  margin-bottom: 10px;
+}
+
+.pdf-viewer {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 80vh;
+  min-height: 400px;
+  border: 0;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+/* Galeria com rolagem */
+div.scrollgallery {
+  background-color: #426b0b;
+  overflow: auto;
+  white-space: normal;
+}
+
+/* Legenda da foto na página "Missão" */
+figcaption {
+  color: white;
+  margin-top: 10px;
+  font-size: small;
+}
+
+/* Mostra um bloco com quote */
+blockquote {
+  border-left-width: .25rem;
+  border-left: 5px solid #323944;
+  font-size: 17.5px;
+  margin: 0 0 20px;
+  padding: 10px 20px;
+}
+
+.instagram-embed {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 12px;
+}
+
+.instagram-embed .instagram-media {
+  width: 100% !important;
+  max-width: 540px;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px auto 20px;
+  padding: 8px 8px;
+  border-radius: 4px;
+  background: #833ab4;
+
+
+  background-image: linear-gradient(to right, #833ab4 , #FF1493, yellow);
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.instagram-link:hover {
+  background: linear-gradient(to right, #833ab4 , #FF1493, yellow);
+}
+
+.instagram-link .fa-instagram {
+  width: auto;
+  padding: 0;
+  font-size: 20px;
+}
+
+.youtube-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px auto 20px;
+  padding: 8px 8px;
+  border-radius: 4px;
+  background: red;
+
+
+  background-image: red;
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.youtube-link:hover {
+  background: red;
+}
+
+.youtube-link .fa-youtube {
+  width: auto;
+  padding: 0;
+  font-size: 20px;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px auto 20px;
+  padding: 8px 8px;
+  border-radius: 4px;
+  background: green;
+
+
+  background-image: green;
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.whatsapp-link:hover {
+  background: green;
+}
+
+.whatsapp-link .fa-whatsapp {
+  width: auto;
+  padding: 0;
+  font-size: 20px;
+}
+
+.mail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px auto 20px;
+  padding: 8px 8px;
+  border-radius: 4px;
+  background: blue;
+
+
+  background-image: blue;
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.mail-link:hover {
+  background: blue;
+}
+
+.mail-link .fa-envelope {
+  width: auto;
+  padding: 0;
+  font-size: 20px;
+}
+
+a {
+  color: #426b0b;
+}
+
+a:hover {
+  color: #32CD32;
+}
+
+.botoes-sociais {
+  display: flex;
+}
+
+.creditos {
+  background-color: white;
+  padding: 24px 12px;
+  margin: 0;
+  text-align: center;
+}
+
+.revista-container {
+  position: relative;
+  width: 100%;
+}
+
+.revista-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #fff;
+}
+
+.revista-loading[hidden] {
+  display: none;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 4px solid #ddd;
+  border-top-color: #426b0b;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+    .yt-widget-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      margin-bottom: 32px;
+    }
+
+    .yt-widget-header {
+      margin-bottom: 20px;
+    }
+
+    .yt-widget-header h2 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    /* Grade responsiva de 1 a 3 colunas */
+    .yt-video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .yt-video-item {
+      min-width: 0;
+    }
+
+    .yt-player-shell {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .yt-player-shell iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .yt-player-target {
+      width: 100%;
+      height: 100%;
+    }
+
+    .yt-video-label {
+      margin: 8px 0 0;
+      font-size: 15px;
+      font-weight: 600;
+    }

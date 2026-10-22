@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Gastronomia Cultural</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+
+	<body>
+	<div vw class="enabled">
+		<div vw-access-button class="active"></div>
+		<div vw-plugin-wrapper>
+			<div class="vw-plugin-top-wrapper"></div>
+		</div>
+	</div>
+	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+	<script>
+		new window.VLibras.Widget("https://vlibras.gov.br/app");
+	</script>
+	<header class="header">
+		<a class="logo-link" href="index.html" aria-label="Gastronomia Cultural - Início">
+			<img class="logo" src="Logo Gastronomia Cultural.jpg" alt="Gastronomia Cultural">
+		</a>
+
+		<p class="titulo"><b>Gastronomia Cultural</b><span class="subtitulo">📗Workshop, oficinas e palestras. 🍽 Alimentação natural, sustentável e inclusiva.</span></p>
+
+	<!-- Add icon library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<div class="redes-sociais">
+	<a
+		class="instagram-link"
+		href="https://www.instagram.com/gastronomiaculturaloficial/"
+		target="_blank"
+		rel="noopener noreferrer">
+		<i class="fa fa-instagram" aria-hidden="true"></i>
+		<span>Instagram</span>
+	</a>
+	<a
+		class="youtube-link"
+		href="https://www.youtube.com/@gastronomiaculturaloficial"
+		target="_blank"
+		rel="noopener noreferrer">
+		<i class="fa fa-youtube" aria-hidden="true"></i>
+		<span>Youtube</span>
+	</a>
+	<a
+		class="whatsapp-link"
+		href="https://wa.me/5521986147273"
+		target="_blank"
+		rel="noopener noreferrer">
+		<i class="fa fa-whatsapp" aria-hidden="true"></i>
+		<span>Whatsapp</span>
+	</a>
+	<a
+		class="mail-link"
+		href="mailto:nilda.paes@gastronomiacultural.com.br"
+		target="_blank"
+		rel="noopener noreferrer">
+		<i class="fa fa-envelope" aria-hidden="true"></i>
+		<span>Email</span>
+	</a>
+	</div>
+
+		<nav class="header-right" aria-label="Navegação principal">
+			<a href="index.html">Início</a>
+			<a class="active" href="sobre.html" aria-current="page">Sobre</a>
+			<a href="redes.html">Redes</a>
+		</nav>
+	</header>
+
+	<p class="n1">Saiba mais sobre a fundadora da Gastronomia Cultural, Nilda Paes.</p>
+
+	<p class="n1">Edição completa da revista: <a href="https://revistabonapetit.aflip.in/edicao-junho2024#page/4" style="text-decoration:none">Revista Digital Bonapetit. Junho de 2024.</a></p>
+
+<div class="revista-container">
+  <div class="revista-loading" id="revista-loading" role="status">
+    <span class="spinner" aria-hidden="true"></span>
+    <span>Carregando revista...</span>
+  </div>
+
+  <iframe
+    id="revista-iframe"
+    class="pdf-viewer"
+    src="https://revistabonapetit.aflip.in/edicao-junho2024#page/4"
+    title="Revista Digital Bonapetit, edição de junho de 2024"
+    loading="lazy">
+  </iframe>
+</div>
+
+<script>
+  const revistaIframe = document.getElementById("revista-iframe");
+  const carregamento = document.getElementById("revista-loading");
+
+  revistaIframe.addEventListener("load", () => {
+    carregamento.hidden = true;
+  }, { once: true });
+</script>
+
+</body>
+<footer>
+  <h5 class="creditos">Desenvolvido por Luan Ricardo para Gastronomia Cultural — 2026. Todos os direitos reservados.</h5>
+</footer>
+</html>
