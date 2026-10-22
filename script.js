@@ -5,12 +5,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const credit = document.getElementById("imgcredit");
   const previousButton = document.getElementById("previousImage");
   const nextButton = document.getElementById("nextImage");
+  const gallery = document.querySelector(".scrollgallery");
+  const imageViewer = document.getElementById("imgContainer");
 
   if (!expandedImage || !caption || !credit || !previousButton || !nextButton || thumbnails.length === 0) {
     return;
   }
 
   let currentIndex = 0;
+  let autoAdvanceTimer;
+
+  function stopAutoAdvance() {
+    window.clearTimeout(autoAdvanceTimer);
+  }
+
+  function startAutoAdvance() {
+    stopAutoAdvance();
+
+    const interactionInProgress =
+      document.hidden ||
+      [gallery, imageViewer].some((element) =>
+        element &&
+        (element.matches(":hover") || element.contains(document.activeElement))
+      );
+
+    if (interactionInProgress) {
+      return;
+    }
+
+    autoAdvanceTimer = window.setTimeout(() => {
+      showImage(currentIndex + 1, true);
+    }, 8000);
+  }
 
   function scrollThumbnailIntoView(thumbnail) {
     const gallery = thumbnail.closest(".scrollgallery");
@@ -51,6 +77,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (scrollThumbnail) {
       scrollThumbnailIntoView(thumbnail);
     }
+
+    startAutoAdvance();
   }
 
   thumbnails.forEach((thumbnail, index) => {
@@ -69,6 +97,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   previousButton.addEventListener("click", () => showImage(currentIndex - 1, true));
   nextButton.addEventListener("click", () => showImage(currentIndex + 1, true));
+
+  [gallery, imageViewer].forEach((element) => {
+    if (!element) {
+      return;
+    }
+
+    element.addEventListener("mouseenter", stopAutoAdvance);
+    element.addEventListener("mouseleave", startAutoAdvance);
+    element.addEventListener("focusin", stopAutoAdvance);
+    element.addEventListener("focusout", (event) => {
+      if (!element.contains(event.relatedTarget)) {
+        startAutoAdvance();
+      }
+    });
+  });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoAdvance();
+    } else {
+      startAutoAdvance();
+    }
+  });
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
