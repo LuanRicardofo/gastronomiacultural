@@ -180,7 +180,7 @@
 
 <div class="yt-widget-container">
 	<div class="yt-widget-header">
-		<h2>Vídeos do YouTube</h2>
+		<h2>Os 10 vídeos mais recentes</h2>
 	</div>
 	<div id="yt-videos" class="yt-video-grid" aria-label="Dez vídeos mais recentes do canal"></div>
 	<p><a href="https://www.youtube.com/playlist?list=UUfpWascpFplZuUXXenSs3Ng" target="_blank" rel="noopener noreferrer">Abrir a playlist no YouTube</a></p>
@@ -202,6 +202,8 @@
 		player.id = `yt-player-${index}`;
 		player.className = 'yt-player-target';
 		playerShell.appendChild(player);
+
+		const label = document.createElement('p');
 
 		video.append(playerShell, label);
 		videosContainer.appendChild(video);
