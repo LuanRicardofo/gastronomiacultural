@@ -408,7 +408,9 @@ body {
   background: #456710;
 }
 
-.column img.selected {
+.column img.selected,
+.column img:hover,
+.column img:focus-visible {
   outline: 3px solid white;
   outline-offset: 2px;
 }
