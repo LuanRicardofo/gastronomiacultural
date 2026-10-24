@@ -1,25 +1,17 @@
-# **Site As 7 Maravilhas do Mundo**
+# **Site Gastronomia Cultural**
 
-## **Home**
+## **Início**
 
-Página inicial do projeto. Contém uma galeria com uma breve explicação sobre cada local.
+Página inicial do projeto. Contém uma galeria com uma breve explicação sobre a Gastronomia Cultural e sua responsável, Nilda Paes.
 
 ## **Sobre**
 
-Contém vídeos falando sobre cada ponto turístico.
+Contém uma entrevista com Nilda para a Revista Digital Bonapetit, em Junho de 2024.
 
-## **Missão**
+## **Redes**
 
-Contém um texto do site New 7 Wonders que explica a motivação por trás do projeto.
-
-## **Mais**
-
-Contém um vídeo da cerimônia de escolha das 7 Maravilhas e imagens 360° do Google Maps. Ao clicar em ir para o site do Maps, é possível encontrar novas funções, como outras fotos, avaliações do local, entre outros.
+Contém as redes sociais da Gastronomia Cultural.
 
 ## **Contribuidor**
 
 – Luan Ricardo
-
-
-
-

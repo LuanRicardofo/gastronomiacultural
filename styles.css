@@ -5,12 +5,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.titulo .subtitulo {
+body {
+  background-image: url('fundo_site.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
+.titulo {
   font-size: 16px;
   margin: 10px;
   text-align: center;
   overflow: auto;
-  color: black;
+  color: #456710;
+}
+
+.subtitulo {
+  font-size: 16px;
+  margin: 10px;
+  text-align: center;
+  overflow: auto;
+  color: #97cd3f;
 }
 
 .header {
@@ -54,12 +69,35 @@ body {
 }
 
 .header-right a:hover {
-  background-color: #ddd;
+  background-color: #97cd3f;
 }
 
 .header-right a.active {
-  background-color: #426b0b;
+  background-color: #456710;
   color: white;
+}
+
+.header .redes-sociais a,
+.header .redes-sociais a:link,
+.header .redes-sociais {
+  color: white;
+}
+
+a:visited {
+  color: #97cd3f;
+}
+
+.header .redes-sociais a:hover {
+  color: #97cd3f;
+}
+
+a:link {
+  color: #97cd3f;
+}
+
+a:hover {
+  color: white;
+  background-color: #97cd3f;
 }
 
 @media screen and (max-width: 700px) {
@@ -191,7 +229,7 @@ body {
 
 /* Barra de navegação do site */
 :root {
---cor-primaria:#426b0b;
+--cor-primaria:#456710;
 }
 
 .nav{
@@ -210,6 +248,8 @@ text-decoration:none;
 font-weight:bold;
 border-bottom:2px solid white;
 }
+
+
 
 /* Título da página na barra de navegação */
 #titulo, #subtitulo 	{
@@ -235,6 +275,10 @@ p.n1 {
 	font-family: Arial;
   color: white;
   font-size: 12px;
+  background-color: #456710;
+  padding: 24px 12px;
+  margin: 0;
+  text-align: center;
 }
 
 p.n2 {
@@ -268,8 +312,6 @@ body {
   margin: 0;
   font-family: Arial;
 }
-
-/* 4 colunas iguais que ficam uma ao lado da outra */
 
 .column {
   float: left;
@@ -319,10 +361,9 @@ body {
   object-fit: contain;
 }
 
-/* Expande o texto da imagem */
 #imgtext {
   max-width: 900px;
-  color: white;
+  color: #456710;
   font-size: 15px;
   text-align: center;
   margin: 12px auto;
@@ -337,7 +378,7 @@ body {
 }
 
 #imgcredit a {
-  color: white;
+  color: #456710;
 }
 
 .image-viewer {
@@ -364,7 +405,7 @@ body {
 }
 
 .image-viewer-control:hover {
-  background: #426b0b;
+  background: #456710;
 }
 
 .column img.selected {
@@ -422,16 +463,9 @@ body {
 
 /* Galeria com rolagem */
 div.scrollgallery {
-  background-color: #426b0b;
+  background-color: #456710;
   overflow: auto;
   white-space: normal;
-}
-
-/* Legenda da foto na página "Missão" */
-figcaption {
-  color: white;
-  margin-top: 10px;
-  font-size: small;
 }
 
 /* Mostra um bloco com quote */
@@ -466,17 +500,8 @@ blockquote {
   text-decoration: none;
 }
 
-/* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-facebook {
-  background: #3B5998;
-  color: white;
 }
 
 .instagram-link {
@@ -540,7 +565,6 @@ blockquote {
   border-radius: 4px;
   background: green;
 
-
   background-image: green;
   color: white;
   font-size: 10px;
@@ -566,7 +590,6 @@ blockquote {
   border-radius: 4px;
   background: blue;
 
-
   background-image: blue;
   color: white;
   font-size: 10px;
@@ -581,14 +604,6 @@ blockquote {
   width: auto;
   padding: 0;
   font-size: 20px;
-}
-
-a {
-  color: #426b0b;
-}
-
-a:hover {
-  color: #32CD32;
 }
 
 .botoes-sociais {
