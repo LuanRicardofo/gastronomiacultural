@@ -12,6 +12,24 @@ body {
   background-size: cover;
 }
 
+.texto1 {
+  margin: 20px;
+  text-align: justify;
+  color: #456710;
+}
+
+.texto2 {
+  margin: 20px;
+  text-align: justify;
+  color: #456710;
+}
+
+.texto3 {
+  margin: 20px;
+  text-align: justify;
+  color: #456710;
+}
+
 .titulo {
   font-size: 16px;
   margin: 10px;
@@ -61,11 +79,11 @@ body {
 .header-right a {
   padding: 12px;
   border-radius: 4px;
-  color: black;
   text-align: center;
   text-decoration: none;
   font-size: 18px;
   line-height: 25px;
+  background-color: #EEE9E9;
 }
 
 .header-right a:hover {
