@@ -14,19 +14,13 @@ body {
 
 .texto1 {
   margin: 20px;
-  text-align: justify;
+  text-align: left;
   color: #456710;
 }
 
 .texto2 {
   margin: 20px;
-  text-align: justify;
-  color: #456710;
-}
-
-.texto3 {
-  margin: 20px;
-  text-align: justify;
+  text-align: left;
   color: #456710;
 }
 
@@ -255,8 +249,6 @@ text-decoration:none;
 font-weight:bold;
 border-bottom:2px solid white;
 }
-
-
 
 /* Título da página na barra de navegação */
 #titulo, #subtitulo 	{
