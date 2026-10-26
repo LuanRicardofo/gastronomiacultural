@@ -7,7 +7,7 @@
 		<meta name="description" content="📗Workshop, oficinas e palestras. 🍽 Alimentação natural, sustentável e inclusiva.">
 
 		<script defer src="/_vercel/insights/script.js"></script>
-		
+
 		<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="https://gastronomiacultural.vercel.app/">
@@ -27,12 +27,6 @@
 
 		<link rel="stylesheet" href="styles.css">
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<style>
-			#galeria-toggle:hover {
-				background-color: #97cd3f;
-				color: white;
-			}
-		</style>
 	</head>
 
 	<body>
@@ -97,57 +91,6 @@
 		</nav>
 	</header>
 
-	<div class="header-right" style="position: sticky; top: 0; z-index: 10; justify-content: center; margin: 24px 0; padding: 8px 0; background-color: #f1f1f1;">
-	<a id="galeria-toggle" class="normal" href="#galeria-conteudo" aria-controls="myDIV" aria-expanded="true" onclick="myFunction(); return false;">Ver galeria</a>
-	</div>
-
-	<div id="myDIV">
-	<h1 class="texto1">
-	O que é a Gastronomia Cultural?
-	</h1>
-
-	<h3 class="texto2">
-	A Gastronomia Cultural é um projeto de gastronomia, cultura, inclusão social e sustentabilidade, criado por Nilda Paes de Azevedo, que une o conhecimento sobre os alimentos à valorização das histórias, dos saberes populares e das tradições alimentares.
-
-	O projeto tem como propósito mostrar que a gastronomia vai muito além de preparar alimentos: ela é uma ferramenta de educação, saúde, geração de renda, transformação social e preservação ambiental.
-
-	Por meio de oficinas, aulas-show, palestras, feiras, exposições e degustações, a Gastronomia Cultural promove a alimentação natural e sustentável, o aproveitamento integral dos alimentos, a redução do desperdício e o consumo consciente.
-	</h3>
-	
-	<h3 class="texto3">
-	Suas ações valorizam os ingredientes locais, a agricultura familiar, a economia criativa e o conhecimento transmitido entre gerações, demonstrando que aquilo que muitas vezes seria descartado pode se transformar em novas receitas, oportunidades de negócio e fontes de renda.
-
-	<p>Com atenção especial às comunidades em situação de vulnerabilidade social e ao público estudantil, o projeto busca democratizar o acesso ao conhecimento, promover a inclusão e incentivar atitudes sustentáveis no cotidiano. Também valoriza a acessibilidade, incluindo recursos como a interpretação em Libras em suas atividades.</p>
-	
-	<p>A Gastronomia Cultural integra cultura, alimentação, educação e responsabilidade socioambiental, contribuindo para os Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030 da ONU.</p>
-
-	<p>Sua missão é alimentar, educar e preservar, utilizando a gastronomia como instrumento de valorização cultural, desenvolvimento humano, sustentabilidade e economia criativa.</p>
-	</h3>
-	</div>
-
-	<script>
-	function myFunction() {
-		const content = document.getElementById("myDIV");
-		const button = document.getElementById("galeria-toggle");
-		const gallery = document.getElementById("galeria-conteudo");
-
-		if (!content || !button || !gallery) {
-			return;
-		}
-
-		const isVisible = content.style.display !== "none";
-		content.style.display = isVisible ? "none" : "block";
-		button.classList.toggle("active", isVisible);
-		button.setAttribute("aria-expanded", String(!isVisible));
-		button.textContent = isVisible ? "Esconder galeria" : "Ver galeria";
-		if (isVisible) {
-			gallery.scrollIntoView({ behavior: "smooth", block: "start" });
-		} else {
-			window.scrollTo({ top: 0, behavior: "smooth" });
-		}
-	}
-	</script>
-
 	<div id="galeria-conteudo">
 	<p class="n1">Clique nas imagens para mais detalhes. Post original: <a href="https://www.instagram.com/p/C6h8SKWOclq/" style="text-decoration:none">Instagram, 3 de maio de 2024</a></p>
 
@@ -183,17 +126,45 @@
 	</div>
 	</div>
 	</div>
-	<div class="container" id="imgContainer">
-		<div class="image-viewer">
-			<button class="image-viewer-control" id="previousImage" type="button" aria-label="Imagem anterior">&#10094;</button>
-			<img id="expandedImg">
-			<button class="image-viewer-control" id="nextImage" type="button" aria-label="Próxima imagem">&#10095;</button>
-		</div>
-		<div id="imgtext" aria-live="polite"></div>
-		<div id="imgcredit"></div>
+
+	<div class="gallery-toggle-bar">
+	<button id="galeria-toggle" type="button" aria-controls="imgContainer" aria-expanded="false">Ver galeria</button>
+	</div>
+	<div class="container" id="imgContainer" hidden>
+	<div class="image-viewer">
+	<button class="image-viewer-control" id="previousImage" type="button" aria-label="Imagem anterior">&#10094;</button>
+	<img id="expandedImg">
+	<button class="image-viewer-control" id="nextImage" type="button" aria-label="Próxima imagem">&#10095;</button>
+	</div>
+	<div id="imgtext" aria-live="polite"></div>
+	<div id="imgcredit"></div>
 	</div>
 	</div>
 	<script src="script.js"></script>
+
+	<div id="myDIV">
+	<h1 class="texto1">
+	O que é a Gastronomia Cultural?
+	</h1>
+
+	<h3 class="texto2">
+	A Gastronomia Cultural é um projeto de gastronomia, cultura, inclusão social e sustentabilidade, criado por Nilda Paes de Azevedo, que une o conhecimento sobre os alimentos à valorização das histórias, dos saberes populares e das tradições alimentares.
+
+	O projeto tem como propósito mostrar que a gastronomia vai muito além de preparar alimentos: ela é uma ferramenta de educação, saúde, geração de renda, transformação social e preservação ambiental.
+
+	Por meio de oficinas, aulas-show, palestras, feiras, exposições e degustações, a Gastronomia Cultural promove a alimentação natural e sustentável, o aproveitamento integral dos alimentos, a redução do desperdício e o consumo consciente.
+	</h3>
+
+	<h3 class="texto3">
+	Suas ações valorizam os ingredientes locais, a agricultura familiar, a economia criativa e o conhecimento transmitido entre gerações, demonstrando que aquilo que muitas vezes seria descartado pode se transformar em novas receitas, oportunidades de negócio e fontes de renda.
+
+	<p>Com atenção especial às comunidades em situação de vulnerabilidade social e ao público estudantil, o projeto busca democratizar o acesso ao conhecimento, promover a inclusão e incentivar atitudes sustentáveis no cotidiano. Também valoriza a acessibilidade, incluindo recursos como a interpretação em Libras em suas atividades.</p>
+
+	<p>A Gastronomia Cultural integra cultura, alimentação, educação e responsabilidade socioambiental, contribuindo para os Objetivos de Desenvolvimento Sustentável (ODS) da Agenda 2030 da ONU.</p>
+
+	<p>Sua missão é alimentar, educar e preservar, utilizando a gastronomia como instrumento de valorização cultural, desenvolvimento humano, sustentabilidade e economia criativa.</p>
+	</h3>
+	</div>
 
 </body>
 <footer>

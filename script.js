@@ -5,10 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const credit = document.getElementById("imgcredit");
   const previousButton = document.getElementById("previousImage");
   const nextButton = document.getElementById("nextImage");
+  const galleryToggle = document.getElementById("galeria-toggle");
+  const introText = document.getElementById("myDIV");
   const gallery = document.querySelector(".scrollgallery");
   const imageViewer = document.getElementById("imgContainer");
 
-  if (!expandedImage || !caption || !credit || !previousButton || !nextButton || thumbnails.length === 0) {
+  if (!expandedImage || !caption || !credit || !previousButton || !nextButton || !galleryToggle || !introText || !imageViewer || thumbnails.length === 0) {
     return;
   }
 
@@ -23,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     stopAutoAdvance();
 
     const interactionInProgress =
+      imageViewer.hidden ||
       document.hidden ||
       [gallery, imageViewer].some((element) =>
         element &&
@@ -36,6 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
     autoAdvanceTimer = window.setTimeout(() => {
       showImage(currentIndex + 1, true);
     }, 8000);
+  }
+
+  function setImageViewerVisible(visible) {
+    imageViewer.hidden = !visible;
+    introText.hidden = visible;
+    galleryToggle.setAttribute("aria-expanded", String(visible));
+    galleryToggle.textContent = visible ? "Esconder galeria" : "Ver galeria";
+
+    if (visible) {
+      startAutoAdvance();
+    } else {
+      stopAutoAdvance();
+    }
   }
 
   function scrollThumbnailIntoView(thumbnail) {
@@ -86,15 +102,20 @@ document.addEventListener("DOMContentLoaded", () => {
     thumbnail.setAttribute("tabindex", "0");
     thumbnail.setAttribute("aria-label", thumbnail.alt);
     thumbnail.setAttribute("aria-pressed", "false");
-    thumbnail.addEventListener("click", () => showImage(index, true));
+    thumbnail.addEventListener("click", () => {
+      setImageViewerVisible(true);
+      showImage(index, true);
+    });
     thumbnail.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
+        setImageViewerVisible(true);
         showImage(index, true);
       }
     });
   });
 
+  galleryToggle.addEventListener("click", () => setImageViewerVisible(imageViewer.hidden));
   previousButton.addEventListener("click", () => showImage(currentIndex - 1, true));
   nextButton.addEventListener("click", () => showImage(currentIndex + 1, true));
 
