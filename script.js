@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setImageViewerVisible(visible) {
     imageViewer.hidden = !visible;
-    introText.hidden = visible;
     galleryToggle.setAttribute("aria-expanded", String(visible));
     galleryToggle.textContent = visible ? "Esconder galeria" : "Ver galeria";
 
