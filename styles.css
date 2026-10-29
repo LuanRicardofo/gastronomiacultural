@@ -89,6 +89,17 @@ body {
   color: white;
 }
 
+.destaque {
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  background-color: #456710;
+  color: white;
+}
+
 .header .redes-sociais a,
 .header .redes-sociais a:link,
 .header .redes-sociais {
@@ -404,7 +415,7 @@ body {
 }
 
 .image-viewer-control:hover {
-  background: #456710;
+  background: #97cd3f;
 }
 
 .column img.selected,
